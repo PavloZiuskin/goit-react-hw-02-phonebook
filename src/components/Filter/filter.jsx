@@ -1,4 +1,6 @@
-import {LabelFilter}from "components/Filter/Filret.style"
+
+import PropTypes from 'prop-types';
+import { LabelFilter } from "components/Filter/Filret.style"
 export const Filter = ({ value, onChange }) => {
   return (
     <LabelFilter>
@@ -7,3 +9,7 @@ export const Filter = ({ value, onChange }) => {
     </LabelFilter>
   );
 };
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+}

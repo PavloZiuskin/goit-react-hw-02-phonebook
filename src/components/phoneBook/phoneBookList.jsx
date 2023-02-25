@@ -1,4 +1,5 @@
-import {ContactsItem} from 'components/phoneBookItem/phoneBookItem' 
+import PropTypes from 'prop-types';
+import { ContactsItem } from 'components/phoneBookItem/phoneBookItem' 
 export const ContactsList = ({ contacts, onClick }) => {
     return (
         <section>
@@ -14,3 +15,7 @@ export const ContactsList = ({ contacts, onClick }) => {
         </section>
     )
 }
+ContactsList.propTypes = {
+    contacts: PropTypes.array.isRequired,
+    onClick: PropTypes.func.isRequired
+} 
